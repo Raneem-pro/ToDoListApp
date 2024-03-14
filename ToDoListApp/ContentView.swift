@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var task: String = ""
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack{
+            VStack{
+                ZStack {
+                    List{
+                        
+                    }
+                }
+                Spacer()
+                Button("+ New Task") {
+                }
+                .buttonStyle(.borderedProminent)
+                .cornerRadius(30)
+                .padding(30)
+            }
+            .navigationTitle("To do list")
         }
-        .padding()
     }
 }
 
