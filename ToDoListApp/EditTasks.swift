@@ -1,5 +1,5 @@
 //
-//  addTaskView.swift
+//  EditTasks.swift
 //  ToDoListApp
 //
 //  Created by رنيم القرني on 04/09/1445 AH.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct addTaskView: View {
+struct EditTasks: View {
     @State var taskTitle: String = ""
     @State var taskDetails: String = ""
     @State var dueDate: Date = .init()
@@ -28,7 +28,7 @@ struct addTaskView: View {
                                Text("Due Date")
                            }
                 .padding()
-                Button(" Add Task") {
+                Button("Update") {
                     
                 }
                 .buttonStyle(.borderedProminent)
@@ -36,14 +36,14 @@ struct addTaskView: View {
                 .padding(30)
                 Spacer()
             }
-            .navigationTitle("Add New Task")
+            .navigationTitle("Edit Task")
             .textFieldStyle(WhiteBorder())
         }
-
-
     }
 }
 
+
+
 #Preview {
-    addTaskView()
+    EditTasks()
 }
