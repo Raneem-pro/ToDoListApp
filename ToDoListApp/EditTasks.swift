@@ -18,12 +18,15 @@ struct EditTasks: View {
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .leading)
                 TextField("Title", text: $taskTitle)
-                          .padding()
+                          .modifier(TextFieldModifierView())
+                          
                 Text("Descreption")
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .leading)
                 TextField("Descreption", text: $taskDetails, axis: .vertical)
+                          .modifier(TextFieldModifierView())
                           .padding()
+                
                 DatePicker(selection: $dueDate,in: Date()...,displayedComponents: .date) {
                                Text("Due Date")
                            }
@@ -37,12 +40,21 @@ struct EditTasks: View {
                 Spacer()
             }
             .navigationTitle("Edit Task")
-            .textFieldStyle(WhiteBorder())
+            
         }
     }
 }
 
-
+struct TextFieldModifierView: ViewModifier{
+    func body(content: Content) -> some View {
+        content
+            .padding()
+            .overlay(
+                RoundedRectangle(cornerRadius: 30)
+                    .stroke(Color.black, lineWidth:2)
+            )
+    }
+}
 
 #Preview {
     EditTasks()
