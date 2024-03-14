@@ -17,6 +17,7 @@
 		32206E6E2BA3703F002753A8 /* TasksModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 32206E6C2BA3703F002753A8 /* TasksModel.xcdatamodeld */; };
 		32206E702BA37CDC002753A8 /* addTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32206E6F2BA37CDC002753A8 /* addTaskView.swift */; };
 		32206E722BA38E7F002753A8 /* EditTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32206E712BA38E7F002753A8 /* EditTasks.swift */; };
+		32206E762BA3A2EB002753A8 /* DataControllar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32206E752BA3A2EB002753A8 /* DataControllar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		32206E6D2BA3703F002753A8 /* TasksModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TasksModel.xcdatamodel; sourceTree = "<group>"; };
 		32206E6F2BA37CDC002753A8 /* addTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTaskView.swift; sourceTree = "<group>"; };
 		32206E712BA38E7F002753A8 /* EditTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTasks.swift; sourceTree = "<group>"; };
+		32206E752BA3A2EB002753A8 /* DataControllar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataControllar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				32206E6C2BA3703F002753A8 /* TasksModel.xcdatamodeld */,
+				32206E752BA3A2EB002753A8 /* DataControllar.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32206E6E2BA3703F002753A8 /* TasksModel.xcdatamodeld in Sources */,
+				32206E762BA3A2EB002753A8 /* DataControllar.swift in Sources */,
 				32206E722BA38E7F002753A8 /* EditTasks.swift in Sources */,
 				32206E442BA36EBF002753A8 /* ContentView.swift in Sources */,
 				32206E422BA36EBF002753A8 /* ToDoListAppApp.swift in Sources */,

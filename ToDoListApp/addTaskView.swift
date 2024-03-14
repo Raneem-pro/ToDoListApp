@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct addTaskView: View {
+    @Environment(\.managedObjectContext) var manageObjectContext
+    @Environment(\.dismiss) var dismiss
     @State var taskTitle: String = ""
     @State var taskDetails: String = ""
     @State var dueDate: Date = .init()
-    @Binding var tasks: [String]
     var body: some View {
         NavigationStack{
             VStack {
@@ -32,8 +33,8 @@ struct addTaskView: View {
                            }
                 .padding()
                 Button(" Add Task") {
-                    tasks.append(taskTitle)
-                    
+                    DataControllar().addTask(taskTitle, taskDetails, dueDate, manageObjectContext)
+                    dismiss()
                 }
                 .buttonStyle(.borderedProminent)
                 .cornerRadius(30)
@@ -48,5 +49,5 @@ struct addTaskView: View {
 }
 
 #Preview {
-    addTaskView(tasks: .constant([]))
+    addTaskView()
 }
