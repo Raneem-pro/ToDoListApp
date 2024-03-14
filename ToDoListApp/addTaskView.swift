@@ -11,6 +11,7 @@ struct addTaskView: View {
     @State var taskTitle: String = ""
     @State var taskDetails: String = ""
     @State var dueDate: Date = .init()
+    @Binding var tasks: [String]
     var body: some View {
         NavigationStack{
             VStack {
@@ -18,17 +19,20 @@ struct addTaskView: View {
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .leading)
                 TextField("Title", text: $taskTitle)
+                          .modifier(TextFieldModifierView())
                           .padding()
                 Text("Descreption")
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .leading)
                 TextField("Descreption", text: $taskDetails, axis: .vertical)
+                    .modifier(TextFieldModifierView())
                           .padding()
                 DatePicker(selection: $dueDate,in: Date()...,displayedComponents: .date) {
                                Text("Due Date")
                            }
                 .padding()
                 Button(" Add Task") {
+                    tasks.append(taskTitle)
                     
                 }
                 .buttonStyle(.borderedProminent)
@@ -37,7 +41,6 @@ struct addTaskView: View {
                 Spacer()
             }
             .navigationTitle("Add New Task")
-            .textFieldStyle(WhiteBorder())
         }
 
 
@@ -45,5 +48,5 @@ struct addTaskView: View {
 }
 
 #Preview {
-    addTaskView()
+    addTaskView(tasks: .constant([]))
 }
