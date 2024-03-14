@@ -8,21 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var tasks: [String] = []
     var body: some View {
         NavigationStack{
             VStack{
                 ZStack {
                     List{
-                        ForEach(tasks, id:\.self){ task in
-                            Text(task)
-                        }
+                        
+                        
                     }
                 }
                 Spacer()
 
                 NavigationLink {
-                    addTaskView(tasks:$tasks)
                 } label: {
                   Text("+ New Task")
                 }
